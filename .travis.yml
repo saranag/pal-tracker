@@ -11,7 +11,7 @@ jobs:
   include:
     - stage: build and publish
       language: java
-      jdk: openjdk11
+      jdk: openjdk8
       install: skip
       script: ./gradlew clean build
       before_deploy:
@@ -37,3 +37,4 @@ jobs:
         password: $CF_PASSWORD
         organization: $CF_ORG
         space: $CF_SPACE
+        edge: true
